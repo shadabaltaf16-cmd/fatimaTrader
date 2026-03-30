@@ -1,7 +1,7 @@
 import { Tabs } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 
-export default function TabLayout() {
+export default function Layout() {
   return (
     <Tabs
       screenOptions={{
@@ -30,7 +30,7 @@ export default function TabLayout() {
       }}
     >
       <Tabs.Screen
-        name="customers"
+        name="index"
         options={{
           title: 'Customers',
           tabBarIcon: ({ color, size }) => (
@@ -82,3 +82,4 @@ export default function TabLayout() {
     </Tabs>
   );
 }
+
