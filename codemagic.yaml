@@ -12,8 +12,7 @@ workflows:
     scripts:
       - npm install
       - npm install -g eas-cli
-      - npx expo login --token $-IEWeg-Dik6_xfbNlix43GFBXDRSwBKb-32NpqOV
-      - npx expo whoami
+      - npx eas whoami
       - npx eas init --non-interactive
       - npx eas build --platform android --non-interactive --profile preview
 
