@@ -8,11 +8,11 @@ workflows:
     working_directory: frontend
 
     scripts:
-      - pwd
-      - ls -la
       - npm install
-      - npx expo prebuild --platform android
+      - npx expo prebuild --platform android --clean
+      - ls android
       - cd android
+      - chmod +x gradlew
       - ./gradlew assembleRelease
 
     artifacts:
