@@ -10,9 +10,9 @@ workflows:
     working_directory: frontend
 
     scripts:
+      - rm -rf .expo
       - npm install
       - npm install -g eas-cli
-      - npx eas whoami
       - npx eas init --non-interactive
       - npx eas build --platform android --non-interactive --profile preview
 
