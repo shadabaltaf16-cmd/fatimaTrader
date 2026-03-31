@@ -14,9 +14,8 @@ workflows:
       - npm install -g eas-cli
       - npx expo login --token $-IEWeg-Dik6_xfbNlix43GFBXDRSwBKb-32NpqOV
       - npx expo whoami
-      - npx expo prebuild --platform android
-      - npx expo export
-      - eas build --platform android --non-interactive --profile preview
+      - npx eas init --non-interactive
+      - npx eas build --platform android --non-interactive --profile preview
 
     artifacts:
       - "**/*.apk"
