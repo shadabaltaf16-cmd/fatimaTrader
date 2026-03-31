@@ -1,12 +1,15 @@
 workflows:
   android-build:
-    name: Android Build
+    name: Android APK Build
     environment:
       node: latest
+
     scripts:
+      - cd frontend
       - npm install
       - npx expo prebuild --platform android
       - cd android
       - ./gradlew assembleRelease
+
     artifacts:
-      - android/app/build/outputs/**/*.apk
+      - frontend/android/app/build/outputs/**/*.apk
