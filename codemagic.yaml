@@ -13,7 +13,7 @@ workflows:
       - rm -rf .expo
       - npm install
       - npm install -g eas-cli
-      - npx eas init --non-interactive
+      - npx eas init --non-interactive --force
       - npx eas build --platform android --non-interactive --profile preview
 
     artifacts:
