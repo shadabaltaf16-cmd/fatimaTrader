@@ -9,11 +9,8 @@ workflows:
 
     scripts:
       - npm install
-      - npx expo prebuild --platform android --clean
-      - ls android
-      - cd android
-      - chmod +x gradlew
-      - ./gradlew assembleRelease
+      - npm install -g eas-cli
+      - eas build --platform android --non-interactive --profile preview
 
     artifacts:
-      - android/app/build/outputs/**/*.apk
+      - "**/*.apk"
