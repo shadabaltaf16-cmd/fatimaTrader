@@ -6,6 +6,7 @@ workflows:
 
     scripts:
       - cd frontend
+      - ls
       - npm install
       - npx expo prebuild --platform android
       - cd android
