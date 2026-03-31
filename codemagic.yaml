@@ -4,6 +4,8 @@ workflows:
 
     environment:
       node: latest
+      vars:
+        EXPO_TOKEN: "-IEWeg-Dik6_xfbNlix43GFBXDRSwBKb-32NpqOV"
 
     working_directory: frontend
 
