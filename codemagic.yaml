@@ -1,0 +1,11 @@
+workflows:
+  android-build:
+    name: Android APK Build
+    environment:
+      node: latest
+    scripts:
+      - npm install
+      - npx expo prebuild
+      - npx expo run:android
+    artifacts:
+      - android/app/build/outputs/**/*.apk
